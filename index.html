@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/images/favicon.svg">
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="./assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome icons -->
+  <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+  <!-- Core theme CSS -->
+  <link href="./assets/css/styles.css" rel="stylesheet" />
+  <!-- Aos CSS -->
+  <link href="./assets/css/aos/aos.css" rel="stylesheet">
+
+  <title> Designer Portfolio</title>
+</head>
+
+<body>
+
+  <!--Pre Loader 
+  <div class="preloader-container">
+    <img src="./assets/images/loading.gif" alt="" />
+    <h4 class="preloader-text">Loading Website...</h4>
+  </div>
+  <!--End Pre Loader-->
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light fixed-top text-uppercase  " id="mainNav">
+    <div class="container-fluid navbar__container">
+      <a class="navbar-brand" href="#">
+        <svg width="49" height="20" viewBox="0 0 49 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.6164 0.510205V19.4898H9.15369L8.97619 18.0867C8.01265 19.3622 6.73637 20 5.14736 20C3.44003 20 2.1553 19.3452 1.29318 18.0357C0.43106 16.7262 0 14.915 0 12.602C0 11.2075 0.23666 9.96599 0.709981 8.87755C1.1833 7.77211 1.84257 6.91327 2.68779 6.30102C3.54991 5.67177 4.53881 5.35714 5.65449 5.35714C6.82089 5.35714 7.80134 5.71429 8.59585 6.42857V0L13.6164 0.510205ZM6.84625 16.3776C7.55623 16.3776 8.13943 15.9779 8.59585 15.1786V9.71939C8.35919 9.46429 8.12252 9.27721 7.88586 9.15816C7.6492 9.02211 7.38719 8.95408 7.09981 8.95408C6.50816 8.95408 6.03484 9.2517 5.67985 9.84694C5.32486 10.4252 5.14736 11.3605 5.14736 12.6531C5.14736 14.1497 5.29105 15.1446 5.57842 15.6378C5.8827 16.131 6.30531 16.3776 6.84625 16.3776Z"
+            fill="black" />
+          <path
+            d="M22.075 5.35714C24.2387 5.35714 25.9376 5.9949 27.1716 7.27041C28.4226 8.54592 29.048 10.3571 29.048 12.7041C29.048 14.1667 28.7606 15.4507 28.1859 16.5561C27.6281 17.6616 26.8251 18.5119 25.777 19.1071C24.729 19.7024 23.495 20 22.075 20C19.9112 20 18.2039 19.3622 16.953 18.0867C15.719 16.8112 15.102 15 15.102 12.6531C15.102 11.1905 15.3809 9.90646 15.9387 8.80102C16.5135 7.69558 17.3249 6.84524 18.3729 6.25C19.421 5.65476 20.655 5.35714 22.075 5.35714ZM22.075 8.97959C21.4326 8.97959 20.9678 9.26871 20.6804 9.84694C20.393 10.4252 20.2493 11.3605 20.2493 12.6531C20.2493 13.9966 20.393 14.9575 20.6804 15.5357C20.9678 16.0969 21.4326 16.3776 22.075 16.3776C22.7174 16.3776 23.1822 16.0884 23.4696 15.5102C23.757 14.932 23.9007 13.9966 23.9007 12.7041C23.9007 11.3605 23.757 10.4082 23.4696 9.84694C23.1822 9.26871 22.7174 8.97959 22.075 8.97959Z"
+            fill="black" />
+          <path
+            d="M43.298 12.5C43.298 12.9252 43.2642 13.4609 43.1965 14.1071H34.981C35.1163 15.0255 35.3952 15.6463 35.8178 15.9694C36.2573 16.2755 36.8828 16.4286 37.6942 16.4286C38.1675 16.4286 38.6493 16.335 39.1395 16.148C39.6297 15.9439 40.1707 15.6378 40.7623 15.2296L42.7908 17.9847C41.1511 19.3282 39.2916 20 37.2124 20C34.812 20 32.9948 19.3367 31.7608 18.0102C30.5268 16.6667 29.9097 14.898 29.9097 12.7041C29.9097 11.3435 30.1633 10.1105 30.6704 9.0051C31.1945 7.88265 31.9636 6.9983 32.9779 6.35204C33.9921 5.68878 35.2177 5.35714 36.6546 5.35714C37.99 5.35714 39.1564 5.63776 40.1538 6.19898C41.1511 6.7602 41.9203 7.57653 42.4612 8.64796C43.019 9.71939 43.298 11.0034 43.298 12.5ZM38.3535 11.0714C38.3365 10.2721 38.2098 9.65136 37.9731 9.20918C37.7533 8.76701 37.3476 8.54592 36.756 8.54592C36.1982 8.54592 35.7755 8.7415 35.4882 9.13265C35.2177 9.52381 35.0402 10.2296 34.9557 11.25H38.3535V11.0714Z"
+            fill="black" />
+          <path
+            d="M46.3883 14.7449C47.1152 14.7449 47.7322 15.0085 48.2393 15.5357C48.7464 16.0459 49 16.6582 49 17.3724C49 18.0867 48.7464 18.7075 48.2393 19.2347C47.7322 19.7449 47.1152 20 46.3883 20C45.6614 20 45.0444 19.7449 44.5373 19.2347C44.0301 18.7075 43.7766 18.0867 43.7766 17.3724C43.7766 16.6582 44.0301 16.0459 44.5373 15.5357C45.0444 15.0085 45.6614 14.7449 46.3883 14.7449Z"
+            fill="black" />
+        </svg>
+
+
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav  ml-auto text-center ">
+          <li class="nav-item  ">
+            <a class="nav-link " href="#about"> about </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio"> Portfolio</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#resume">Resume </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Position Marker -->
+     <div class="position__marker ">
+      <img class="position__image" src="" alt="">
+    </div>
+   <!-- Position Marker -->
+
+
+  <!-- about -->
+  <section id="about">
+    <div class="container-fluid d-flex align-items-center justify-content-center ">
+      <!-- Dark Mode Button  -->
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="switch-toggle">
+          <input type="checkbox" id="switch-toggle" />
+          <div class="slider round"></div>
+        </label>
+      </div>
+      <!-- Dark Mode Button  -->
+
+      <div class="row h-75 h-md-75 align-items-center justify-content-center position-relative ">
+        <div class="col-10 ">
+          <div class="row d-flex justify-content-center position-relative">
+            <div class="col-xl-3 col-lg-5 col-md-12 col-12  text-center text-xl-right mb-4 mb-md-0"
+              data-aos="fade-zoom-in" data-aos-duration="2000" data-aos-delay="500">
+              <img class="img-fluid" src="./assets/images/Aivaj.jpeg" alt="designer picture">
+            </div>
+            <div class="col-xl-5 col-lg-6 col-md-12 col-12 ml-4" data-aos="fade-zoom-in" data-aos-duration="2000"
+              data-aos-delay="700">
+              <h1> I'm <span class="text-blue"> Aivaj Chavan </span></h1>
+              <p class="about__subtitle"> a Grafic Designer </p>
+              <p class="about__text">I am a designer based in Kalyan, Mumbai; focused on creating immersive interfaces. I
+                am also passionate
+                about using the various forms of design to create delightful user experiences</p>
+              <a class="link  " href="#portfolio"> Take a tour <img class="pl-2 "
+                  src="./assets/images/icons/arrow-down.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-10  px-0 col-lg-1 d-flex align-self-end  justify-content-around justify justify-content-lg-end align-items-end flex-row flex-lg-column mt-4 mt-lg-0 about__socialContainer">
+          <!-- <a href="#" class="about__social behance"> <i class="fab fa-behance-square"></i> </a> -->
+          <!-- <a href="#" class="about__social  twitter"> <i class="fab fa-twitter"></i></a> -->
+          <!-- <a href="#" class="about__social dribble"> <i class="fas fa-basketball-ball"></i></a> -->
+          <a href="https://www.instagram.com/_unique_graphic_/" class="about__social instagram"><i class="fab fa-instagram"></i></i></a>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+
+  <!-- About -->
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <div class="container-fluid">
+      <h2 class="font-weight-bold mb-2 mb-md-5 section__title  pl-0 pl-xl-5 " data-aos="fade-up"
+        data-aos-duration="2000"> Portfolio </h2>
+
+      <!-- 01 -->
+      <div class="row ">
+        <div class="col-12 col-lg-6  mb-5" data-aos="fade-right" data-aos-duration="2000">
+          <div class="mt-4">
+            <h3 class="card__title  pl-xl-5 d-none d-sm-block "> 01 </h3>
+            <div class="card__body  mt-5">
+              <span class="d-flex">
+                <p class="font-weight-bold"> Strategy,UI/UX </p>
+                <!-- <p class="font-weight-bold ml-4">May,2020 </p> -->
+              </span>
+              <div class="card__text ">
+                <h4 class="font-weight-bold  mb-4"> Graphic Design</h4>
+                <p class="mb-4">Graphic design mockups illustrating diverse skills, creativity, and professional versatility.</p>
+                <a href="#" class="link"> Go to Readme.com <img src="./assets/images/icons/arrow-right.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 overflow-hidden  px-0" data-aos="fade-left" data-aos-duration="2000">
+          <img class="card__image img-fluid  mx-auto " src="./assets/images/portfolio/1.png" alt="">
+        </div>
+      </div>
+      <!-- 01 -->
+
+      <!-- 02 -->
+      <div class="row mt-5">
+        <div class="col-12 col-lg-6 overflow-hidden  px-0 order-2 order-lg-1" data-aos="fade-right"
+          data-aos-duration="2000">
+          <img class="card__image img-fluid  mx-auto" src="./assets/images/portfolio/2.jpeg" alt="">
+        </div>
+        <div class="col-12 col-lg-6  mb-5 order-1 order-lg-2" data-aos="fade-left" data-aos-duration="2000">
+          <div class="mt-4 ">
+            <h3 class="card__title text-right pr-5 d-none d-sm-block"> 02 </h3>
+            <div class="card__body  mt-5">
+              <span class="d-flex">
+                <p class="font-weight-bold"> Illustration </p>
+                <!-- <p class="font-weight-bold ml-4">Jun,2019 </p> -->
+              </span>
+              <div class="card__text ">
+                <h4 class="font-weight-bold  mb-4"> Dripbox Onboarding Illustrations</h4>
+                <p class="mb-4"> I created a suite of illustrations for Dripbox’s website onboarding. The brief was to
+                  create fun and brand centric illustrations.</p>
+                <a href="#" class="link"> Go to Drip.box <img src="./assets/images/icons/arrow-right.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 02 -->
+
+      <!-- 03 -->
+      <div class="row mt-5">
+        <div class="col-12 col-lg-6  mb-5" data-aos="fade-right" data-aos-duration="2000">
+          <div class="mt-4">
+            <h3 class="card__title pl-5 d-none d-sm-block"> 03 </h3>
+            <div class="card__body  mt-5">
+              <span class="d-flex">
+                <p class="font-weight-bold"> App Design </p>
+                <!-- <p class="font-weight-bold ml-4"> January, 2018</p> -->
+              </span>
+              <div class="card__text ">
+                <h4 class="font-weight-bold  mb-4"> Dripbox Onboarding Illustrations</h4>
+                <p class="mb-4"> I created a suite of illustrations for Dripbox’s website onboarding. The brief was to
+                  create fun and brand centric illustrations.</p>
+                <a href="#" class="link"> Download Topical.ly
+                  <img src="./assets/images/icons/arrow-right.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 overflow-hidden  px-0" data-aos="fade-left" data-aos-duration="2000">
+          <img class="card__image img-fluid  mx-auto" src="./assets/images/portfolio/3.jpeg" alt="">
+        </div>
+      </div>
+      <!-- 03 -->
+
+      <!-- 04 -->
+      <div class="row mt-5">
+        <div class="col-12 col-lg-6 overflow-hidden  px-0 order-2 order-lg-1" data-aos="fade-right"
+          data-aos-duration="2000">
+          <img class="card__image img-fluid  mx-auto" src="./assets/images/portfolio/4.jpeg" alt="">
+        </div>
+        <div class="col-12 col-lg-6  mb-5 order-1 order-lg-2" data-aos="fade-left" data-aos-duration="2000">
+          <div class="mt-4 ">
+            <h3 class="card__title text-right pr-5 d-none d-sm-block"> 04 </h3>
+            <div class="card__body  mt-5">
+              <span class="d-flex">
+                <p class="font-weight-bold"> UX Research </p>
+                <!-- <p class="font-weight-bold ml-4">February,2020 </p> -->
+              </span>
+              <div class="card__text ">
+                <h4 class="font-weight-bold  mb-4"> Dripbox Onboarding Illustrations</h4>
+                <p class="mb-4"> I created a suite of illustrations for Dripbox’s website onboarding. The brief was to
+                  create fun and brand centric illustrations.</p>
+                <a href="#" class="link"> Go to Cardbury.app <img src="./assets/images/icons/arrow-right.svg"
+                    alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 04 -->
+
+      <!-- 05 -->
+      <div class="row mt-5">
+        <div class="col-12 col-lg-6  mb-5" data-aos="fade-right" data-aos-duration="2000">
+          <div class="mt-4">
+            <h3 class="card__title pl-5 d-none d-sm-block"> 05 </h3>
+            <div class="card__body  mt-5">
+              <span class="d-flex">
+                <p class="font-weight-bold"> AR Experience Design </p>
+                <!-- <p class="font-weight-bold ml-4"> July, 2019</p> -->
+              </span>
+              <div class="card__text ">
+                <h4 class="font-weight-bold  mb-4"> Dripbox Onboarding Illustrations</h4>
+                <p class="mb-4"> I created a suite of illustrations for Dripbox’s website onboarding. The brief was to
+                  create fun and brand centric illustrations.</p>
+                <a href="#" class="link"> Download Fitbag
+                  <img src="./assets/images/icons/arrow-right.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 overflow-hidden px-0" data-aos="fade-left" data-aos-duration="2000">
+          <img class="card__image img-fluid  mx-auto" src="./assets/images/portfolio/5.jpeg" alt="">
+        </div>
+      </div>
+      <!-- 05 -->
+
+      <!-- 06 -->
+      <div class="row mt-5">
+        <div class="col-12 col-lg-6 overflow-hidden  px-0 order-2 order-lg-1" data-aos="fade-right"
+          data-aos-duration="2000">
+          <img class="card__image img-fluid  mx-auto" src="./assets/images/portfolio/6.png" alt="">
+        </div>
+        <div class="col-12 col-lg-6  mb-5 order-1 order-lg-2" data-aos="fade-left" data-aos-duration="2000">
+          <div class="mt-4 ">
+            <h3 class="card__title text-right pr-5 d-none d-sm-block"> 06 </h3>
+            <div class="card__body  mt-5">
+              <span class="d-flex">
+                <p class="font-weight-bold"> Illustration </p>
+                <!-- <p class="font-weight-bold ml-4">Jun,2019 </p> -->
+              </span>
+              <div class="card__text ">
+                <h4 class="font-weight-bold  mb-4"> Graphic Design</h4>
+                <p class="mb-4">Graphic design mockups illustrating diverse skills, creativity, and professional versatility.</p>
+                <a href="#" class="link"> Go to Drip.box <img src="./assets/images/icons/arrow-right.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 06 -->
+
+      <!-- 07 -->
+      <div class="row mt-5">
+        <div class="col-12 col-lg-6  mb-5" data-aos="fade-right" data-aos-duration="2000">
+          <div class="mt-4">
+            <h3 class="card__title pl-5 d-none d-sm-block"> 07 </h3>
+            <div class="card__body  mt-5">
+              <span class="d-flex">
+                <p class="font-weight-bold"> AR Experience Design </p>
+                <!-- <p class="font-weight-bold ml-4"> July, 2019</p> -->
+              </span>
+              <div class="card__text ">
+                <h4 class="font-weight-bold  mb-4"> Dripbox Onboarding Illustrations</h4>
+                <p class="mb-4"> I created a suite of illustrations for Dripbox’s website onboarding. The brief was to
+                  create fun and brand centric illustrations.</p>
+                <a href="#" class="link"> Download Fitbag
+                  <img src="./assets/images/icons/arrow-right.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 overflow-hidden px-0" data-aos="fade-left" data-aos-duration="2000">
+          <img class="card__image img-fluid  mx-auto" src="./assets/images/portfolio/7.jpeg" alt="">
+        </div>
+      </div>
+      <!-- 07 -->
+
+
+    </div>
+
+  </section>
+
+  <!-- Portfolio -->
+
+
+  <!-- Resume -->
+
+  <section id="resume">
+    <div class="container-fluid ">
+      <h2 class="font-weight-bold mb-5   pl-0 pl-xl-5 section__title" data-aos="fade-up" data-aos-duration="2000">
+        Resume </h2>
+
+        div class="row d-flex justify-content-between  px-0 px-xl-5">
+
+        <div class="col-12 col-lg-5 resume__title" data-aos="flip-left" data-aos-duration="2000">
+          <h4 class="font-weight-bold"> Education </h4>
+          <ul class="pl-5 resume__border mt-5">
+            <li class="resume__item mb-4">
+              <p> 2017 - 2021</p>
+              <p class="resume__career">Civil Diploma</p>
+              <p class="resume__university">Armite College</p>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="col-12 col-lg-5  resume__title" data-aos="flip-left" data-aos-duration="2000" data-aos-delay="500">
+          <h4 class="font-weight-bold"> Work </h4>
+          <ul class="pl-5 resume__border mt-5">
+            <li class="resume__item mb-4">
+              <p> 2017 - 2021</p>
+              <p class="resume__career">Geaphic Designer</p>
+              <p class="resume__university">Yog Graphic</p>
+            </li>
+            <li class="resume__item mb-4">
+              <p> 2021 - 2023</p>
+              <p class="resume__career">All type of Product Designer</p>
+              <p class="resume__university">Prime Prints</p>
+            </li>
+            <li class="resume__item mb-4">
+              <p> 2023 - Present</p>
+              <p class="resume__career">Geaphic Designer Artist</p>
+              <p class="resume__university">Perfect Creation</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-1 d-flex" data-aos="flip-left" data-aos-duration="2000" data-aos-delay="1000">
+          <a href="assets/images/cv.pdf" class="resume__button mb-4" download>
+            <div class="resume__button-text">
+              Download as PDF
+            </div>
+          </a>
+        </div>
+        
+
+      </div>
+    </div>
+  </section>
+  <!-- Resume -->
+
+
+  <!-- Contact -->
+
+  <section id="contact">
+    <div class="container-fluid">
+      <h2 class="font-weight-bold mb-5  section__title pl-0 pl-xl-5" data-aos="fade-up" data-aos-duration="2000">
+        Contact </h2>
+      <h4 class="font-weight-semi-bold contact__subtitle pl-0 pl-xl-5" data-aos="fade-up" data-aos-duration="2000">
+        Let's work
+        together! </h4>
+
+      <div class="row px-0 px-xl-5 ">
+        <div class="col-lg-6 col-12">
+          <p class="contact__text mb-5" data-aos="fade-up" data-aos-duration="2000">
+            I’m open to full-time and freelance roles involving Illustration, Grafic Design or Product Design
+          </p>
+
+          <ul class="d-flex justify-content-between">
+            <li class="contact__items mr-1 mr-md-4" data-aos="zoom-in-up" data-aos-duration="2000" data-aos-delay="500">
+              <p class="contact__items-number text-left"> 8+ </p>
+              <p class="contact__items-text  text-left"> years of experience </p>
+            </li>
+            <li class="contact__items mr-1 mr-md-4" data-aos="zoom-in-up" data-aos-duration="2000"
+              data-aos-delay="1000">
+              <p class="contact__items-number text-left"> 10+ </p>
+              <p class="contact__items-text  text-left"> project completed </p>
+            </li>
+            <li class="contact__items" data-aos="zoom-in-up" data-aos-duration="2000" data-aos-delay="1500">
+              <p class="contact__items-number text-left"> 10+ </p>
+              <p class="contact__items-text  text-left"> satisfied customers </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-6 col-12">
+          <ul class="d-flex flex-column">
+            <li class="contact__items2 mb-2" data-aos="zoom-in-up" data-aos-duration="2000" data-aos-delay="2000">
+              <p class="contact__items2-title mb-2"> Send an email to</p>
+              <p class="contact__items2-text">john.doe@hey.com</p>
+            </li>
+            <li class="contact__items2" data-aos="zoom-in-up" data-aos-duration="2000" data-aos-delay="2500">
+              <p class="contact__items2-title mb-2"> Or call</p>
+              <p class="contact__items2-text">+918828284827</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+  </section>
+  <!-- Contact -->
+
+
+
+  <!--Footer  -->
+  <footer id="footer">
+    <div class="container-fluid ">
+      <div class="row px-0 px-xl-5" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="0">
+        <div class="col-12 col-md-3 footer__name">
+          Isaac Fayemi
+        </div>
+        <div class="col-12 col-md-3 mx-auto footer__icons d-flex justify-content-between mt-4 mt-md-0">
+          <a href="#" class="behance"> <i class="fab fa-behance-square"></i> </a>
+          <a href="#" class="twitter"> <i class="fab fa-twitter"></i></a>
+          <a href="#" class="dribble"> <i class="fas fa-basketball-ball"></i></a>
+          <a href="#" class="instagram"><i class="fab fa-instagram"></i></i></a>
+        </div>
+
+        <div class="d-none d-md-block col-md-3 text-right">
+          <a href="#" class="footer__up">Back to top
+            <!-- 
+             <img class="ml-2" src="./assets/images/icons/arrow-up.svg" alt="">
+           -->
+            <svg width="40" height="40" class="ml-2" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 12.6668V3.3335" stroke="#333333" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M3.33333 8.00016L8 3.3335L12.6667 8.00016" stroke="#333333" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--Footer -->
+
+  <!-- Main Jquery JS -->
+  <script src="./assets/js/jquery/jquery-3.5.1.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <!-- Popper JS -->
+  <script src="./assets/js/popper/popper.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
+  <!-- Swiper Custome Js -->
+  <script src="./assets/js/swiper/swiperjs-custom.js"></script>
+  <!-- Aos JS -->
+  <script src="./assets/js/aos/aos.js"></script>
+  <!-- Custome Js -->
+  <script src="./assets/js/custom.js"></script>
+</body>
+
+</html>
